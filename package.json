@@ -41,6 +41,7 @@
     "typescript": "^2.1.5",
     "uglify-js": "^2.7.5",
     "uniq": "^1.0.1",
+    "watchify": "^3.9.0",
     "webrtc-swarm": "^2.8.0"
   },
   "browserify": {
