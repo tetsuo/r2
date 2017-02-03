@@ -1,0 +1,40 @@
+@import "vars";
+
+.sidebar {
+	width: 100%;
+    height: 100%;
+	background-color: $sidebar-bgcolor;
+
+	.channel {
+        overflow: hidden;
+
+		a {
+			display: inline-block;
+			width: 100%;
+			color: $sidebar-link-color;
+			padding: $sidebar-link-padding;
+			text-decoration: none;
+			cursor: pointer;
+
+			&:hover {
+				background-color: $sidebar-link-hover-bgcolor;
+			}
+		}
+
+		.current, .current:hover {
+			background: $sidebar-current-bgcolor;
+			color: $sidebar-current-color;
+		}
+
+		.activity {
+		font-weight: bold;
+		color: blue;
+		}
+
+		.mentioned {
+		font-weight: bold;
+		color: red;
+		}
+
+	}
+}

@@ -1,0 +1,57 @@
+.chat {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+
+    .time {
+        width: 8ex;
+        margin-right: 1ex;
+    }
+
+    .input {
+        height: 2em;
+        background-color: white;
+        padding-top: 0.5em;
+        padding-left: 0.5em;
+    }
+
+    .input input[name="text"] {
+        padding: 0px;
+        margin: 0px;
+        width: 100%;
+        border-width: 0px;
+        font-family: Monaco;
+        font-size: 12px;
+    }
+
+    .cli {
+        flex: none;
+    }
+
+    .info {
+        height: 1.5em;
+        padding-top: 0.25em;
+        padding-left: 0.5em;
+        background-color: #3365d9;
+        color: white;
+    }
+
+    .lines {
+        height: 100%;
+        width: 100%;
+        flex: auto;
+        overflow: auto;
+
+        .line {
+            padding: 0.096em 0.3em;
+
+            .user {
+                color: #3365d9;
+            }
+
+            .message {
+                padding-left: 0.6em;
+            }
+        }
+    }
+}

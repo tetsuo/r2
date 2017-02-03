@@ -1,0 +1,58 @@
+{
+  "name": "r2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {},
+  "license": "MIT",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production browserify -p tsify src/main.tsx | uglifyjs -cm > public/bundle.js",
+    "watch": "watchify src/main.tsx -p tsify -o public/bundle.js -dv",
+    "start": "npm run clean && concurrently --raw \"ecstatic -p 8070 public\" \"npm run watch\" --kill-others",
+    "clean": "rimraf public/bundle.js"
+  },
+  "devDependencies": {
+    "@types/levelup": "^0.0.29",
+    "@types/node": "^7.0.4",
+    "@types/react": "^15.0.6",
+    "browserify": "^14.0.0",
+    "concurrently": "^3.1.0",
+    "cross-env": "^3.1.4",
+    "debounce": "^1.0.0",
+    "debug": "^2.6.0",
+    "ecstatic": "^2.1.0",
+    "has": "^1.0.1",
+    "hyperlog": "^4.12.1",
+    "insert-css": "^2.0.0",
+    "insert-sass": "^0.1.0",
+    "memdb": "^1.3.1",
+    "mobx": "^3.0.2",
+    "mobx-react": "^4.1.0",
+    "node-sass": "^4.5.0",
+    "randombytes": "^2.0.3",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-flex-layout": "^0.9.6",
+    "rimraf": "^2.5.4",
+    "shasum": "^1.0.2",
+    "signalhub": "^4.8.0",
+    "strftime": "^0.10.0",
+    "subleveldown": "^2.1.0",
+    "tsify": "^3.0.1",
+    "typescript": "^2.1.5",
+    "uglify-js": "^2.7.5",
+    "uniq": "^1.0.1",
+    "webrtc-swarm": "^2.8.0"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "insert-sass",
+        {
+          "includePaths": [
+            "src/"
+          ]
+        }
+      ]
+    ]
+  }
+}

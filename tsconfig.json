@@ -1,0 +1,22 @@
+{
+	"compilerOptions": {
+		"declaration": true,
+		"sourceMap": true,
+		"module": "commonjs",
+		"outDir": "lib",
+		"target": "es5",
+		"jsx": "react",
+		"experimentalDecorators": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitAny": false,
+		"noImplicitReturns": true,
+		"noImplicitThis": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": false,
+		"suppressImplicitAnyIndexErrors": true,
+		"strictNullChecks": true
+	},
+	"include": [
+		"src/main.tsx"
+	]
+}
